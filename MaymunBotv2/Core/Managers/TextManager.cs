@@ -19,33 +19,6 @@ namespace MaymunBotv2.Core.Managers
 {
     public class TextManager : ModuleBase<SocketCommandContext>
     {
-        [Command("cu")]
-        [Alias("cu ne","cu neresi","cu nedir","cu mu")]
-        public async Task cuAsync()
-        {
-            EmbedBuilder builder = new EmbedBuilder();
-
-            builder.WithTitle("**CU**")
-                .WithDescription(":rofl: **ANANIN AMCUUU HAHAHAHAHA XD** :rofl:")
-                .WithColor(Color.Purple);
-
-            await ReplyAsync("", false, builder.Build());
-        }
-
-        [Command("mıyala")]
-        [Alias("mıyala ne","mıyala nedir","mıyala hastalığı","mıyala?")]
-        public async Task miyalaAsync()
-        {
-            EmbedBuilder builder = new EmbedBuilder();
-
-            builder.WithTitle("**MI YALA**")
-                .WithDescription(":rofl: **YARRAMI YALA HAHAHAHAHA XD** :rofl:")
-                .WithColor(Color.Purple);
-
-            await ReplyAsync("", false, builder.Build());
-        }
-
-
         [Command("ğ")]
         [Alias("Ğ")]
         public async Task gAsync()
@@ -56,28 +29,6 @@ namespace MaymunBotv2.Core.Managers
                 .WithColor(Color.Purple);
 
             await ReplyAsync("", false, builder.Build());
-        }
-
-
-        [Command("nazlı")]
-        public async Task nazlıAsync()
-        {
-            EmbedBuilder builder = new EmbedBuilder();
-
-            builder.WithTitle("**POGACA NAZLI MI ?**")
-                .WithImageUrl("http://www.tarifsandigi.com/wp-content/uploads/z-5-768x1024.jpg")
-                .WithColor(Color.Orange);
-
-            await ReplyAsync("", false, builder.Build());
-
-        }
-
-
-        [Command("31")]
-        public async Task threeoneAsync()
-        {
-            SendAndReactAsync(Context.Channel);
-            await Context.Message.DeleteAsync();
         }
 
         [Command("sa")]
@@ -228,22 +179,7 @@ namespace MaymunBotv2.Core.Managers
             await ReplyAsync("", false, builder.Build());
         }
 
-        [Command("orospucocugu")]
-
-        public async Task orospucocuguAsync()
-        {
-            await Context.User.SendMessageAsync("efendim");
-        }
-
-        [Command("test31")]
-        public async Task testTaskAsync()
-        {
-            using (var client = new System.Net.Http.HttpClient())
-            using (var testStream = await client.GetStreamAsync("https://www.drupal.org/files/issues/sample_7.png"))
-                await Context.Channel.SendFileAsync(testStream, "image.png");
-        }
-
-        [Command("nick31")]
+        [Command("nick")]
         [RequireBotPermission(GuildPermission.ManageNicknames)]
         public async Task nickAsync(string nick)
         {
@@ -267,7 +203,7 @@ namespace MaymunBotv2.Core.Managers
         }
 
 
-        [Command("sus31")]
+        [Command("sus")]
         [RequireBotPermission(GuildPermission.MuteMembers)]
         public async Task muteAsync(SocketGuildUser user)
         {
@@ -286,7 +222,7 @@ namespace MaymunBotv2.Core.Managers
         }
 
 
-        [Command("konuş31")]
+        [Command("konuş")]
         [RequireBotPermission(GuildPermission.MuteMembers)]
         public async Task unmuteAsync(SocketGuildUser user)
         {
@@ -444,28 +380,6 @@ namespace MaymunBotv2.Core.Managers
             return CommandRuntimeResult.FromSuccess();
         }
 
-
-        [Command("yarrak31")]
-        public async Task penisAsync()
-        {
-            string penis()
-            {
-                var length = _random.Next(1, 8);
-                var shaft = "";
-                for (int i = 0; i < length; i++)
-                {
-                    shaft += "=";
-                }
-
-                return $"8{shaft}D";
-            }
-
-            var response = await Task.Run(() => penis());
-            await ReplyAsync(Context.Message.Author.Mention + " senin yarrak boyu kesin böyle:   " + $"**{response}**",
-                false);
-        }
-
-
         [Command("set status")]
         [RequireOwner]
         public async Task statusAsync([Remainder] string args)
@@ -528,19 +442,4 @@ namespace MaymunBotv2.Core.Managers
             Context.Client.StopAsync();
             Context.Client.StartAsync();
         }
-
-        [Command("test3131")]
-        public Task test3131()
-        {
-            List<string> responses = new List<string> {
-                "günaydınn",
-                "günoo",
-                "günaydınss",
-                "günaydın canımm",
-                "biz uyandıkk",
-            };
-
-            return ReplyAsync(responses[_random.Next(0,9)]);
-        }
-    }
 }
