@@ -15,11 +15,21 @@ namespace DiscordBot.Modules
             EmbedBuilder builder = new EmbedBuilder();
 
             builder.AddField("**Maymun BOT Komut Listesi**", "**© MAYMUNLAR DÜNYASI**")
-                .AddField("**KOMUTLAR**" , "Tüm komutlar başına !31 koyarak çalışır.")
+                .AddField("**KOMUTLAR**" , "Tüm komutlar direkt çalışır.")
                 .AddField("**Kullanılabilir Komutlar**",
                 "**yardım** | Buradaki komutlar bölümüne getirir." +
-                "\n**maymunbul** | @ ile taglenen kişi hakkında bilgi verir." +
-                "\n**sil** | Belirtilen miktarda mesaj siler. !31sil 10 gibi.")
+                "\n**maymunbul** | @ ile taglenen kişi hakkında bilgi verir. **maymunbul @maymunbot** gibi." +
+                "\n**sil** | Belirtilen miktarda mesaj siler. **sil 10** gibi." + 
+                "\n**hesapla** | İstenilen matematik işlemini yapar. **hesapla 15+20** gibi kullanılır." +
+                "\n**sayı tut** | 1-10 arası bir sayı tutar." + 
+                "\n**yazı tura** | Yazı - Tura atar." + 
+                "\n**söyle** | Söylenilen şeyi tekrar eder. **söyle Merhaba** gibi kullanılır. Merhaba yazar." +
+                "\n**ping?** | Botun ping durumunu gösterir kritik seviyenin üzerindeyse kırmızı, değilse yeşil renk olarak yanıtlar." +
+                "\n**nick31** | Sunucudaki adınızı değiştirmeye yarar. **nick31 test** şeklinde kullanılır." +
+                "\nYapacağınız isim birden fazla kelimeyse **nick31 \"test isim\"** şeklinde kullanılır." +
+                "\n**sus31** | Birini susturmaya yarar. **sus31 @nick** şeklinde etiketlenen kişiyi susturur." +
+                "\n**konuş31** | Birinin susturmasını kaldırmaya yarar. **konuş31 @nick** şeklinde etiketlenen kişinin susturmasını kaldırır.")
+
                 .AddField("**MÜZİK KOMUTLARI**",
                 "\n**gel** | Botu bulunulan odaya çağırır. Bot odaya gelmeden müzik komutları çalışmaz." +
                 "\n**çal** | Yazılan şarkıyı çalar veya sıraya ekler." +
@@ -28,10 +38,10 @@ namespace DiscordBot.Modules
                 "\n**geç** | Çalan şarkıyı geçmeye yarar." +
                 "\n**dur** | Çalan şarkıyı duraksatır." +
                 "\n**devamke** | Durdurulan şarkıyı devam ettirir." + 
-                "\n**ses** | Botun ses seviyesini herkeste 2 - 150 arası değiştirir. !31ses 120 gibi.")
+                "\n**ses** | Botun ses seviyesini herkes için 2 - 150 arası değiştirir. **ses 120** gibi.")
 
                 .WithColor(Color.Purple)
-                .WithThumbnailUrl(Context.Guild.IconUrl);
+                .WithThumbnailUrl("https://media.giphy.com/media/KzGCAlMiK6hQQ/giphy.gif");
 
             await ReplyAsync("", false, builder.Build());
         }

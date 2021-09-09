@@ -72,7 +72,7 @@ namespace MaymunBotv2.Core.Managers
 
             Console.WriteLine($"[{DateTime.Now}]\t(READY)\tBot is ready.");
             await _client.SetStatusAsync(UserStatus.Online);
-            await _client.SetGameAsync(name: $"Kullanım: {ConfigManager.Config.Prefix}", streamUrl: "https://www.twitch.tv/anil_yalimdemr", ActivityType.Streaming);
+            await _client.SetGameAsync(name: $"Komutlar: yardım", streamUrl:"https://www.twitch.tv/Duthris", ActivityType.Streaming);
         }
     }
 }

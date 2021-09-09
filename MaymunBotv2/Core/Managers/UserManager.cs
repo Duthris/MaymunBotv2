@@ -20,7 +20,7 @@ namespace MaymunBotv2.Core.Managers
                 .WithColor(Color.Purple)
                 .AddField("Hesap oluşturma tarihi", $"{Context.User.CreatedAt}")
                 .AddField("Avatar Linki", $"{Context.User.GetAvatarUrl(size: 2048)}")
-                .WithDescription($"Daha fazla bilgi için: !31maymun {Context.User.Mention}")
+                .WithDescription($"Daha fazla bilgi için: maymunbul {Context.User.Mention}")
                 .WithThumbnailUrl($"{Context.User.GetAvatarUrl(ImageFormat.Auto)}")
                 .WithFooter($"{DateTime.Now}");
 

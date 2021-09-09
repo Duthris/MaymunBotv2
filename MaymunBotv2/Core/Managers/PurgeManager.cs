@@ -19,7 +19,7 @@ namespace DiscordBot.Modules
             
             const int delay = 5000;
 
-            IUserMessage msg = await ReplyAsync($"{amount} adet mesaj silindi.");
+            IUserMessage msg = await ReplyAsync($"{amount} adet mesaj silindi :white_check_mark:");
             await Task.Delay(delay);
             await msg.DeleteAsync();
         }
