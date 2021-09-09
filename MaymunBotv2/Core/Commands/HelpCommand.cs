@@ -25,10 +25,10 @@ namespace DiscordBot.Modules
                 "\n**yazı tura** | Yazı - Tura atar." + 
                 "\n**söyle** | Söylenilen şeyi tekrar eder. **söyle Merhaba** gibi kullanılır. Merhaba yazar." +
                 "\n**ping?** | Botun ping durumunu gösterir kritik seviyenin üzerindeyse kırmızı, değilse yeşil renk olarak yanıtlar." +
-                "\n**nick31** | Sunucudaki adınızı değiştirmeye yarar. **nick31 test** şeklinde kullanılır." +
+                "\n**nick** | Sunucudaki adınızı değiştirmeye yarar. **nick31 test** şeklinde kullanılır." +
                 "\nYapacağınız isim birden fazla kelimeyse **nick31 \"test isim\"** şeklinde kullanılır." +
-                "\n**sus31** | Birini susturmaya yarar. **sus31 @nick** şeklinde etiketlenen kişiyi susturur." +
-                "\n**konuş31** | Birinin susturmasını kaldırmaya yarar. **konuş31 @nick** şeklinde etiketlenen kişinin susturmasını kaldırır.")
+                "\n**sus** | Birini susturmaya yarar. **sus31 @nick** şeklinde etiketlenen kişiyi susturur." +
+                "\n**konuş** | Birinin susturmasını kaldırmaya yarar. **konuş31 @nick** şeklinde etiketlenen kişinin susturmasını kaldırır.")
 
                 .AddField("**MÜZİK KOMUTLARI**",
                 "\n**gel** | Botu bulunulan odaya çağırır. Bot odaya gelmeden müzik komutları çalışmaz." +
