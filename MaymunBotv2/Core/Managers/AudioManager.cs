@@ -18,7 +18,7 @@ namespace MaymunBotv2.Core.Managers
 
         public static async Task<string> JoinAsync(IGuild guild, IVoiceState voiceState, ITextChannel channel)
         {
-            if (_lavaNode.HasPlayer(guild)) return "ikiye mi bölüneyim orospucocugu?";
+            if (_lavaNode.HasPlayer(guild)) return "ikiye mi bölüneyim ?";
             if (voiceState.VoiceChannel is null) return "bir yere gir babun";
 
             try
